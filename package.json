@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-jshint": "^2.0.4",
+    "http-proxy-middleware": "^0.17.4"
+  }
+}

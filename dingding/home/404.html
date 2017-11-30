@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>专车畅行券</title>
+    <link rel="stylesheet" type="text/css" href="/css/login.css"/>
+</head>
+<body style="background:url(/images/bg.png) repeat;">
+<div class="error">
+</div>
+<div class="er-ct">
+        <ul>
+              <li style=" list-style:none;">可能是因为</li>
+             <li>网络信号差</li>
+             <li>找不到请求页面</li>
+        </ul>
+</div>
+<!-- er-ct end -->
+
+    <script>
+    (function(doc, win) {
+        var _root = doc.documentElement,
+            resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            resizeCallback = function() {
+                var clientWidth = _root.clientWidth,
+                    fontSize = 10 * 10;
+                if (!clientWidth) return;
+                if (clientWidth < 1080) {
+                    fontSize = 100 * (clientWidth / 750);
+                } else {
+                    fontSize = 100 * (1080 / 750);
+                }
+                _root.style.fontSize = fontSize + 'px';
+            };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvent, resizeCallback, false);
+        doc.addEventListener('DOMContentLoaded', resizeCallback, false);
+    })(document, window);
+    </script>
+</body>
+
+</html>

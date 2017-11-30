@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>专车畅行券</title>
+    <link rel="stylesheet" type="text/css" href="/css/login.css" />
+</head>
+
+<body>
+    <div class="car">
+    </div>
+    <div class="login">
+        <div class="loginbg">
+            <div class="item">
+                <input placeholder="请输入手机号" class="input-item" maxlength="11">
+                <input class="obtain" value="获取验证码" type="button" id="btnSendCode">
+            </div>
+            <div class="item">
+                <input placeholder="请输入验证码" class="code-check" />
+            </div>
+            <input class="obtain2" type="button" value="领取5折打车券" id="obtain2">
+        </div>
+        <!-- loginbg end -->
+    </div>
+    <!-- login end -->
+    <div class="ex-bg">
+        <dl class="explain">
+            <dt>使用规则</dt>
+            <dd>1.优惠券使用期限为11月20日-12月31日</dd>
+            <dd>2.优惠券使用范围为重庆主城区域，区县不参与本次活动</dd>
+            <dd style="line-height:0.42rem;">
+                3.优惠券当天使用次数不设上限，账户中五折优惠券使用完毕后系统会自动发放新的五折优惠券</dd>
+            <dd>4.优惠券仅限在线支付时使用，每张订单仅限使用一张优惠</dd>
+        </dl>
+    </div>
+    <!-- ex-bg end -->
+    <!-- 弹窗 -->
+    <div class="gray">
+    </div>
+    <div class="boxbg">
+        <img src="/images/delete.png" class="delete">
+        <div class="remind">
+            请输入下方的图形验证码
+        </div>
+        <div class="erwibg">
+            <div class="erwei">
+                <img src="" alt="0" class="ermg" id="erwi">
+            </div>
+        </div>
+        <div class="entry-bg">
+            <div class="entry">
+                <input class="entry-input" placeholder="请输入图形验证码" autocomplete="off" type="input" name="test"  value="" id="entry-input">         
+            </div>
+        </div>
+        <!-- entry-bg end -->
+        <div class="surebtn">
+            <input type="button" value="确认" class="sure">
+        </div>
+    </div>
+    <!-- boxbg end -->
+    
+    <script src="/js/jquery-1.11.0.min.js"></script>
+    <script src="/js/login.js" type="text/javascript"></script>
+    <script>
+    (function(doc, win) {
+        var _root = doc.documentElement,
+            resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            resizeCallback = function() {
+                var clientWidth = _root.clientWidth,
+                    fontSize = 10 * 10;
+                if (!clientWidth) return;
+                if (clientWidth < 1080) {
+                    fontSize = 100 * (clientWidth / 750);
+                } else {
+                    fontSize = 100 * (1080 / 750);
+                }
+                _root.style.fontSize = fontSize + 'px';
+            };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvent, resizeCallback, false);
+        doc.addEventListener('DOMContentLoaded', resizeCallback, false);
+    })(document, window);
+    </script>
+</body>
+
+</html>
